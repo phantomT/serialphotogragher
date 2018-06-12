@@ -33,3 +33,5 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+RC_FILE = myappicon.rc
