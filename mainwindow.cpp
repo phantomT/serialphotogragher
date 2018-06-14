@@ -44,7 +44,15 @@ void MainWindow::on_sendButton_clicked()
 
 void MainWindow::on_saveButton_clicked()
 {
+    QFile file("./data-s.txt");
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QTextStream out(&file);
 
+        out<<ui->recievetext->toPlainText()<<endl;
+
+        file.close();
+    }
 }
 
 void MainWindow::read_data()
